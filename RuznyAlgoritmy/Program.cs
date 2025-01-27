@@ -32,13 +32,22 @@ namespace RuznyAlgoritmy
                     case 2:
                         tocka = Algoritmy.Binarni();
                         break;
-
-
-
-
-
+                    case 3:
+                        tocka = Algoritmy.Naivni();
+                        break;
                     case 4:
-                        Algoritmy.Se_Zarazkou();
+                        tocka = Algoritmy.Se_Zarazkou();
+                        break;
+                    case 5: tocka = Algoritmy.Bubble();
+                        break;
+                    case 6:
+                        tocka = Algoritmy.Insert();
+                        break;
+                    case 7:
+                        tocka = Algoritmy.Quick();
+                        break;
+                    case 8:
+                        tocka = Algoritmy.Select();
                         break;
                     case 9:
                         Environment.Exit(0);
@@ -53,13 +62,13 @@ namespace RuznyAlgoritmy
             Environment.Exit(0);
             
         }
-        
+
         static int ZobrazNabidku()
         {
             Console.WriteLine("Hledaci algoritmy: \n1: Bez zarazky \n2: Binarni \n3: Nainvni\n4: Se zarazkou");
             Console.WriteLine("Radici algoritmy:\n5: Bubble sort\n6: Insert\n7:Quick Sort\n8:Select sort \n9: Exit");
             if (int.TryParse(Console.ReadLine(), out int Odpoved))
-            {
+            { 
                 if (Odpoved <= 9 && Odpoved >= 1)
                 {
                     return Odpoved;
